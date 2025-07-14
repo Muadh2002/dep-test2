@@ -51,5 +51,13 @@ app.use('/api/tasks', taskRoutes);
 app.use('/api/goalReviews', goalReviewRoutes);
 app.use('/api/taskReviews', taskReviewRoutes);
 
+// Root route for health check
+app.get('/', (req, res) => {
+  res.send('✅ API is live on Railway');
+});
+
+module.exports = app;
+
+
 // Export app
 module.exports = app;
